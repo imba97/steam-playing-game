@@ -1,3 +1,2 @@
-import useRequest from './request'
-
-export const useSteamApi = useRequest
+export { useRequest as useSteamApi } from './request'
+export { getUserPlayingGame } from './user-playing-game'

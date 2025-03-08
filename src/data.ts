@@ -41,3 +41,13 @@ export interface GmaeDetailResponse {
     }
   }
 }
+
+export interface UserPlayingGameResponse {
+  playing: boolean
+  game?: {
+    name: string
+    header_image: string
+    background: string
+    background_raw: string
+  }
+}

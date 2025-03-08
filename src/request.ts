@@ -1,6 +1,6 @@
 import type { GmaeDetailResponse, PlayerSummary, PlayerSummaryResponse } from './data'
 
-export default function useRequest(key: string) {
+export function useRequest(key: string) {
   return {
     getPlayerSummary: (steamid: string) => getPlayerSummary(key, steamid),
     getGameDetail
