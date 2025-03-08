@@ -5,7 +5,7 @@ Get the current playing game of a steam user.
 ## Usage
 
 ```ts
-import { getUserPlayingGame, useSteamApi } from 'steam-playing-game'
+import { getUserPlayingGame } from 'steam-playing-game'
 
 getUserPlayingGame('steam-api-key', 'user-id')
 ```
