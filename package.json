@@ -1,0 +1,57 @@
+{
+  "name": "steam-playing-game",
+  "type": "module",
+  "version": "0.0.0",
+  "packageManager": "pnpm@10.6.1",
+  "description": "Get the current playing game of a steam user",
+  "author": "imba97",
+  "license": "MIT",
+  "homepage": "https://github.com/imba97/steam-playing-game#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com:imba97/steam-playing-game.git"
+  },
+  "bugs": {
+    "url": "https://github.com/imba97/steam-playing-game/issues"
+  },
+  "keywords": [
+    "steam",
+    "playing",
+    "game"
+  ],
+  "main": "dist/index.mjs",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "stub": "unbuild --stub",
+    "build": "unbuild",
+    "test": "vitest",
+    "lint": "eslint --cache",
+    "release": "bumpp"
+  },
+  "devDependencies": {
+    "@imba97/eslint-config": "^0.0.6",
+    "@types/node": "^22.13.10",
+    "bumpp": "^10.0.3",
+    "eslint": "^9.22.0",
+    "lint-staged": "^15.4.3",
+    "simple-git-hooks": "^2.11.1",
+    "typescript": "^5.8.2",
+    "unbuild": "^3.5.0",
+    "vitest": "^3.0.8"
+  },
+  "pnpm": {
+    "onlyBuiltDependencies": [
+      "esbuild"
+    ]
+  },
+  "simple-git-hooks": {
+    "pre-commit": "pnpm lint-staged"
+  },
+  "lint-staged": {
+    "*": "eslint --cache --fix"
+  }
+}
