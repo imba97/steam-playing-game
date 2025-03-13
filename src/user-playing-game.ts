@@ -18,9 +18,12 @@ export async function getUserPlayingGame(key: string, steamid: string): Promise<
     return notPlaying
   }
 
+  const gameid = playerSummary.gameid!
+
   return {
     playing: true,
     game: {
+      id: gameid,
       name: gameDetail.data.name,
       header_image: gameDetail.data.header_image,
       background: gameDetail.data.background,

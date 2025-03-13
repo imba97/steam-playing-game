@@ -45,6 +45,7 @@ export interface GmaeDetailResponse {
 export interface UserPlayingGameResponse {
   playing: boolean
   game?: {
+    id: string
     name: string
     header_image: string
     background: string
